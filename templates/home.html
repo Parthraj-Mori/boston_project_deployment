@@ -1,3 +1,31 @@
-<h1>
-    Hello World! 
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="post" >
+        CRIM : <input type="" placeholder="Enter CRIM value" required="required" name="CRIM"><br>
+        CRIM : <submit name=""></submit>
+        ZN : <input type="text" placeholder="Enter ZN value" required="required" name="ZN"><br>
+        INDUS : <input type="text" placeholder="Enter INDUS value" required="required" name="INDUS"><br>
+        CHAS : <input type="text" placeholder="Enter CHAS value" required="required" name="CHAS"><br>
+        NOX : <input type="text" placeholder="Enter NOX value" required="required" name="NOX"><br>
+        RM : <input type="text" placeholder="Enter RM value" required="required" name="RM"><br>
+        AGE : <input type="text" placeholder="Enter AGE value" required="required" name="AGE"><br>
+        DIS : <input type="text" placeholder="Enter DIS value" required="required" name="DIS"><br>
+        RAD : <input type="text" placeholder="Enter RAD value" required="required" name="RAD"><br>
+        TAX : <input type="text" placeholder="Enter TAX value" required="required" name="TAX"><br>
+        PTRATIO : <input type="text" placeholder="Enter PTRATIO value" required="required" name="PTRATIO"><br>
+        B : <input type="text" placeholder="Enter B value" required="required" name="B"><br>
+        LSTAT : <input type="text" placeholder="Enter LSTAT value" required="required" name="LSTAT"><br>
+        <button type="submit">Predict</button>
+        <br>
+        <br>
+
+        {{prediction_text}}
+    </form>
+</body>
+</html>
