@@ -10,7 +10,7 @@ regpredict= pickle.load(open("regpredict.pkl","rb"))
 scaler= pickle.load(open("scaler.pkl","rb"))
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("1.html")
 
 @app.route("/predict_api",methods= ["POST"])
 
@@ -29,7 +29,7 @@ def predict():
     data = [float(x) for x in request.form.values()]
     final_input= scaler.transform(np.array(data).reshape(1,-1))
     output= regpredict.predict(final_input)[0]
-    return render_template('home.html', prediction_text= "The house price is {}".format(output))
+    return render_template('1.html', prediction_text= "The house price is {}".format(output))
 
 if __name__ =="__main__":
     app.run(debug=True)
